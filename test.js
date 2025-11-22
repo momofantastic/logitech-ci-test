@@ -22,29 +22,4 @@ testString();
 
 console.log("\nAll tests passed!");
 process.exit(0);
-```
 
-Create `.github/workflows/test.yml`:
-```yaml
-name: Tests
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    
-    steps:
-    - uses: actions/checkout@v3
-    
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-    
-    - name: Run tests
-      run: npm test
