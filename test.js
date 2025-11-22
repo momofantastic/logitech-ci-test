@@ -11,7 +11,7 @@ function testAddition() {
 
 function testString() {
     const str = "Hello";
-    if (str.length !== 6) {
+    if (str.length !== 4) {
         throw new Error("String test failed!");
     }
     console.log("✓ String test passed");
